@@ -562,7 +562,7 @@ async def view_category_files(query, category_id: str):
     
     for file_info in category['files']:
         try:
-            await query.bot.send_document(
+            await context.bot.send_document(
                 chat_id=query.message.chat_id,
                 document=file_info['file_id'],
                 caption=file_info.get('caption', '')
