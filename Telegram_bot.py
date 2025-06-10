@@ -524,7 +524,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     if data.startswith('view_'):
         category_id = data[5:]
-        await view_category_files(query, category_id)
+        await view_category_files(query, context,category_id)
     
     elif data.startswith('add_'):
         category_id = data[4:]
