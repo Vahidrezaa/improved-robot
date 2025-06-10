@@ -547,7 +547,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         category_id, file_index = parts[0], int(parts[1])
         await delete_file_from_category(query, category_id, file_index)
 
-async def view_category_files(query, category_id: str):
+async def view_category_files(query,context: ContextTypes.DEFAULT_TYPE, category_id: str):
     """نمایش فایل‌های دسته"""
     category = bot_manager.db.get_category(category_id)
     if not category:
